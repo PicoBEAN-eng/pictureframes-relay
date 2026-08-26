@@ -1,7 +1,7 @@
 {
   "id": "pictureframes-relay",
   "name": "Pictureframes Relay",
-  "version": "0.15.5",
+  "version": "0.15.6",
   "minAppVersion": "1.6.6",
   "description": "Shared folders for the pictureframes network. Sign in with Google, paste a Share Key, stay in sync.",
   "author": "PicoBEAN-eng (fork of Relay by System 3, MIT)",
