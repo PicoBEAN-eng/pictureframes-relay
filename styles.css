@@ -521,3 +521,22 @@
 .system3-note-state-muted {
 	color: var(--text-faint);
 }
+
+/* Glyph tables (aspect grids and lists) — tagged by src/glyphs/render.ts on
+   any table holding a rendered glyph span. Obsidian gives every table cell
+   min-width: var(--table-column-min-width) (6ch), which pads each 1.25em
+   glyph with dead space on its right and walks a many-column aspect grid
+   out to the full note width; some themes (Primary) also force tables to
+   width 100%. Shrink these tables to their content like any other table.
+   (2026-09-02: inline styles on the table lost this fight and were
+   reverted in 0.16.15 — the stylesheet + attribute class is the fix.) */
+table[data-pf-glyph-table] {
+	width: auto !important;
+	max-width: 100%;
+	table-layout: auto !important;
+}
+
+table[data-pf-glyph-table] th,
+table[data-pf-glyph-table] td {
+	min-width: 0 !important;
+}
